@@ -11,6 +11,7 @@ ANNOTATION_DIR = "./annotator_files"
 with open("./task_1.pkl", "rb") as f:
     data = pickle.load(f)
 
+
 with open("id_indices.pkl", "rb") as f:
     indexes_id = pickle.load(f)
 
@@ -77,7 +78,7 @@ elif st.session_state.page == "annotation":
         annotations = {}
 
     # Filter out images already annotated
-    annotator_images = [image_files[i] for i in indexes_id[int(annotator_id)]][:2]
+    annotator_images = [image_files[i] for i in indexes_id[int(annotator_id)]]
     remaining_images = [img for img in annotator_images if img not in annotations]
 
     if not remaining_images:

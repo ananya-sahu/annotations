@@ -8,7 +8,7 @@ IMAGE_DIR = "./images"
 ANNOTATION_DIR = "./annotator_files"
 
 # Sample data: Map images to their captions
-with open("/home/as5957/vwp_metric/annotations/task_1.pkl", "rb") as f:
+with open("./task_1.pkl", "rb") as f:
     data = pickle.load(f)
 
 with open("id_indices.pkl", "rb") as f:
